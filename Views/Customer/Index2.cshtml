@@ -1,0 +1,32 @@
+﻿@model CustomerListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <table>
+        @foreach (var customer in Model.Customer)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.City</td>
+
+            </tr>
+        }
+
+    </table>
+    @foreach (var sehir in Model.sehirler)
+    {
+        <h3>@sehir</h3>
+    }
+</body>
+</html>
